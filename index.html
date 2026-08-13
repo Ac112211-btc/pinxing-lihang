@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -11,26 +11,228 @@
 
     <meta
         name="description"
-        content="品行利航电子半导体有限公司，专注电子元器件、半导体及通信电子相关产品，提供产品供应与商务服务。"
+        content="品行利航電子半導體有限公司，專注電子元器件、半導體及通信電子相關產品，提供產品供應與商務服務。"
     >
 
     <meta
         name="keywords"
-        content="品行利航,电子半导体,电子元器件,半导体,光模块,电子产品,新竹"
+        content="品行利航,電子半導體,電子元器件,半導體,光模組,電子產品,新竹"
     >
 
     <meta
         name="author"
-        content="品行利航电子半导体有限公司"
+        content="品行利航電子半導體有限公司"
     >
 
-    <title>品行利航电子半导体有限公司</title>
+    <title>品行利航電子半導體有限公司</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ==================================================
+           LANGUAGE SWITCHER
+        ================================================== */
+
+        .language-switcher {
+            position: relative;
+            margin-left: 6px;
+        }
+
+        .language-button {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            padding: 8px 12px;
+
+            border: 1px solid #dce4ea;
+            border-radius: 5px;
+
+            background: #ffffff;
+            color: #304457;
+
+            font-family: inherit;
+            font-size: 12px;
+
+            cursor: pointer;
+
+            transition:
+                border-color .25s ease,
+                color .25s ease,
+                background .25s ease;
+        }
+
+        .language-button:hover {
+            border-color: #0a69b0;
+            color: #0a69b0;
+            background: #f8fbfd;
+        }
+
+        .language-button-arrow {
+            font-size: 12px;
+            transition: transform .2s ease;
+        }
+
+        .language-switcher.active
+        .language-button-arrow {
+            transform: rotate(180deg);
+        }
+
+        .language-menu {
+            position: absolute;
+
+            top: calc(100% + 8px);
+            right: 0;
+
+            min-width: 145px;
+
+            padding: 6px;
+
+            background: #ffffff;
+
+            border: 1px solid #e2e8ed;
+            border-radius: 6px;
+
+            box-shadow:
+                0 12px 30px rgba(20, 50, 75, .12);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform: translateY(-6px);
+
+            transition:
+                opacity .2s ease,
+                visibility .2s ease,
+                transform .2s ease;
+
+            z-index: 1200;
+        }
+
+        .language-switcher.active
+        .language-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-menu button {
+            display: block;
+
+            width: 100%;
+
+            padding: 10px 12px;
+
+            border: none;
+            border-radius: 4px;
+
+            background: transparent;
+            color: #35495c;
+
+            font-family: inherit;
+            font-size: 12px;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition:
+                background .2s ease,
+                color .2s ease;
+        }
+
+        .language-menu button:hover {
+            background: #edf5fa;
+            color: #0a69b0;
+        }
+
+        .language-menu button.active {
+            background: #edf5fa;
+            color: #0a69b0;
+            font-weight: 600;
+        }
+
+        /* Hide Google Translate's own visible UI */
+        #google_translate_element {
+            position: fixed;
+            left: -9999px;
+            top: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        .goog-tooltip,
+        .goog-tooltip:hover {
+            display: none !important;
+        }
+
+        .goog-text-highlight {
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        @media (max-width: 768px) {
+
+            .language-switcher {
+                width: 100%;
+                margin-left: 0;
+
+                padding:
+                    8px 22px 14px;
+            }
+
+            .language-button {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .language-menu {
+                position: static;
+
+                width: 100%;
+
+                margin-top: 6px;
+
+                box-shadow: none;
+
+                opacity: 1;
+                visibility: visible;
+
+                transform: none;
+
+                display: none;
+            }
+
+            .language-switcher.active
+            .language-menu {
+                display: block;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
+
+
+<!-- Google Translate hidden element -->
+
+<div id="google_translate_element"></div>
+
 
 <!-- ==================================================
      HEADER
@@ -53,7 +255,7 @@
                 </strong>
 
                 <small>
-                    电子半导体有限公司
+                    電子半導體有限公司
                 </small>
 
             </span>
@@ -67,7 +269,7 @@
             class="menu-toggle"
             id="menuToggle"
             type="button"
-            aria-label="打开导航菜单"
+            aria-label="打開導航選單"
             aria-expanded="false"
         >
             <span></span>
@@ -82,32 +284,87 @@
         >
 
             <a href="#home">
-                首页
+                首頁
             </a>
 
             <a href="#about">
-                关于我们
+                關於我們
             </a>
 
             <a href="#company">
-                公司资料
+                公司資料
             </a>
 
             <a href="#products">
-                产品中心
+                產品中心
             </a>
 
             <a href="#services">
-                供应与服务
+                供應與服務
             </a>
 
             <a href="#applications">
-                行业应用
+                行業應用
             </a>
 
             <a href="#contact">
-                联系我们
+                聯絡我們
             </a>
+
+
+            <!-- Language Switcher -->
+
+            <div class="language-switcher" id="languageSwitcher">
+
+                <button
+                    type="button"
+                    class="language-button"
+                    id="languageButton"
+                    aria-label="選擇網站語言"
+                    aria-expanded="false"
+                >
+
+                    <span id="languageButtonText">
+                        🌐 繁體中文
+                    </span>
+
+                    <span class="language-button-arrow">
+                        ▾
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="language-menu"
+                    id="languageMenu"
+                >
+
+                    <button
+                        type="button"
+                        data-lang="zh-TW"
+                        class="active"
+                    >
+                        繁體中文
+                    </button>
+
+                    <button
+                        type="button"
+                        data-lang="zh-CN"
+                    >
+                        简体中文
+                    </button>
+
+                    <button
+                        type="button"
+                        data-lang="en"
+                    >
+                        English
+                    </button>
+
+                </div>
+
+            </div>
 
         </nav>
 
@@ -132,7 +389,7 @@
 
         <img
             src="images/factory.jpg"
-            alt="品行利航电子半导体企业环境"
+            alt="品行利航電子半導體企業環境"
         >
 
     </div>
@@ -151,18 +408,20 @@
 
 
             <h1>
-                连接芯世界
+                連接芯世界
                 <br>
+
                 <span>
-                    专注电子半导体领域
+                    專注電子半導體領域
                 </span>
+
             </h1>
 
 
             <p>
-                品行利航电子半导体有限公司，
-                专注电子元器件、半导体及相关电子产品领域，
-                致力于为客户提供稳定、专业、高效的产品与服务。
+                品行利航電子半導體有限公司，
+                專注電子元器件、半導體及相關電子產品領域，
+                致力於為客戶提供穩定、專業、高效的產品與服務。
             </p>
 
 
@@ -172,7 +431,7 @@
                     href="#products"
                     class="button button-primary"
                 >
-                    查看产品
+                    查看產品
                 </a>
 
 
@@ -180,7 +439,7 @@
                     href="#contact"
                     class="button button-light"
                 >
-                    联系我们
+                    聯絡我們
                 </a>
 
             </div>
@@ -211,11 +470,11 @@
             <div>
 
                 <strong>
-                    专注电子半导体
+                    專注電子半導體
                 </strong>
 
                 <p>
-                    聚焦电子元器件与半导体相关产品。
+                    聚焦電子元器件與半導體相關產品。
                 </p>
 
             </div>
@@ -233,11 +492,11 @@
             <div>
 
                 <strong>
-                    产品供应服务
+                    產品供應服務
                 </strong>
 
                 <p>
-                    面向电子信息产业提供产品支持。
+                    面向電子資訊產業提供產品支援。
                 </p>
 
             </div>
@@ -255,11 +514,11 @@
             <div>
 
                 <strong>
-                    客户合作导向
+                    客戶合作導向
                 </strong>
 
                 <p>
-                    重视长期、稳定、互信的合作关系。
+                    重視長期、穩定、互信的合作關係。
                 </p>
 
             </div>
@@ -277,11 +536,11 @@
             <div>
 
                 <strong>
-                    专业商务服务
+                    專業商務服務
                 </strong>
 
                 <p>
-                    根据客户需求提供产品与商务支持。
+                    根據客戶需求提供產品與商務支援。
                 </p>
 
             </div>
@@ -314,11 +573,11 @@
             </span>
 
             <h2>
-                关于我们
+                關於我們
             </h2>
 
             <p>
-                了解品行利航及我们的业务方向。
+                瞭解品行利航及我們的業務方向。
             </p>
 
         </div>
@@ -333,7 +592,7 @@
 
                     <img
                         src="images/cleanroom.jpg"
-                        alt="电子半导体洁净环境"
+                        alt="電子半導體潔淨環境"
                     >
 
                 </div>
@@ -343,7 +602,7 @@
 
                     <img
                         src="images/factory.jpg"
-                        alt="企业环境"
+                        alt="企業環境"
                     >
 
                 </div>
@@ -360,20 +619,20 @@
 
 
                 <h3>
-                    品行利航电子半导体有限公司
+                    品行利航電子半導體有限公司
                 </h3>
 
 
                 <p>
-                    品行利航电子半导体有限公司
-                    专注于电子半导体及相关电子产品领域，
-                    为客户提供电子元器件、半导体及通信电子相关产品支持。
+                    品行利航電子半導體有限公司
+                    專注於電子半導體及相關電子產品領域，
+                    為客戶提供電子元器件、半導體及通信電子相關產品支援。
                 </p>
 
 
                 <p>
-                    公司重视产品品质、供应稳定性和客户服务，
-                    致力于建立长期、稳定、互信的合作关系。
+                    公司重視產品品質、供應穩定性和客戶服務，
+                    致力於建立長期、穩定、互信的合作關係。
                 </p>
 
 
@@ -387,11 +646,11 @@
                         </span>
 
                         <strong>
-                            专业
+                            專業
                         </strong>
 
                         <p>
-                            专注电子半导体相关产品。
+                            專注電子半導體相關產品。
                         </p>
 
                     </div>
@@ -404,11 +663,11 @@
                         </span>
 
                         <strong>
-                            稳定
+                            穩定
                         </strong>
 
                         <p>
-                            重视产品供应与服务稳定性。
+                            重視產品供應與服務穩定性。
                         </p>
 
                     </div>
@@ -421,11 +680,11 @@
                         </span>
 
                         <strong>
-                            诚信
+                            誠信
                         </strong>
 
                         <p>
-                            坚持长期合作与诚信经营。
+                            堅持長期合作與誠信經營。
                         </p>
 
                     </div>
@@ -462,11 +721,11 @@
             </span>
 
             <h2>
-                公司资料
+                公司資料
             </h2>
 
             <p>
-                品行利航电子半导体有限公司基本信息。
+                品行利航電子半導體有限公司基本資訊。
             </p>
 
         </div>
@@ -482,11 +741,11 @@
                 </span>
 
                 <h3>
-                    公司名称
+                    公司名稱
                 </h3>
 
                 <p>
-                    品行利航电子半导体有限公司
+                    品行利航電子半導體有限公司
                 </p>
 
             </div>
@@ -500,7 +759,7 @@
                 </span>
 
                 <h3>
-                    负责人
+                    負責人
                 </h3>
 
                 <p>
@@ -522,7 +781,7 @@
                 </h3>
 
                 <p>
-                    台湾新竹市東區科園里篤行一路1號
+                    台灣新竹市東區科園里篤行一路1號
                 </p>
 
             </div>
@@ -536,7 +795,7 @@
                 </span>
 
                 <h3>
-                    联系电话
+                    聯絡電話
                 </h3>
 
                 <p>
@@ -558,7 +817,7 @@
                 </span>
 
                 <h3>
-                    电子邮箱
+                    電子郵箱
                 </h3>
 
                 <p>
@@ -601,14 +860,15 @@
             </span>
 
             <h2>
-                产品中心
+                產品中心
             </h2>
 
             <p>
-                聚焦电子元器件、半导体及通信电子相关产品。
+                聚焦電子元器件、半導體及通信電子相關產品。
             </p>
 
         </div>
+
 
 
         <div class="products-grid">
@@ -622,7 +882,7 @@
 
                     <img
                         src="images/products.jpg"
-                        alt="电子元器件产品"
+                        alt="電子元器件產品"
                     >
 
                 </div>
@@ -635,12 +895,12 @@
                     </span>
 
                     <h3>
-                        电子元器件
+                        電子元器件
                     </h3>
 
                     <p>
-                        面向电子设备及相关应用，
-                        提供多类型电子元器件产品。
+                        面向電子設備及相關應用，
+                        提供多類型電子元器件產品。
                     </p>
 
                 </div>
@@ -657,7 +917,7 @@
 
                     <img
                         src="images/packaging.jpg"
-                        alt="半导体产品包装"
+                        alt="半導體產品包裝"
                     >
 
                 </div>
@@ -670,12 +930,12 @@
                     </span>
 
                     <h3>
-                        半导体产品
+                        半導體產品
                     </h3>
 
                     <p>
-                        涵盖不同形式的半导体相关产品，
-                        满足不同电子应用需求。
+                        涵蓋不同形式的半導體相關產品，
+                        滿足不同電子應用需求。
                     </p>
 
                 </div>
@@ -692,7 +952,7 @@
 
                     <img
                         src="images/package-types.jpg"
-                        alt="半导体封装"
+                        alt="半導體封裝"
                     >
 
                 </div>
@@ -705,12 +965,12 @@
                     </span>
 
                     <h3>
-                        半导体封装
+                        半導體封裝
                     </h3>
 
                     <p>
-                        关注不同封装结构及规格，
-                        为客户提供产品选型支持。
+                        關注不同封裝結構及規格，
+                        為客戶提供產品選型支援。
                     </p>
 
                 </div>
@@ -727,7 +987,7 @@
 
                     <img
                         src="images/optical-module.jpg"
-                        alt="通信光模块"
+                        alt="通信光模組"
                     >
 
                 </div>
@@ -740,12 +1000,12 @@
                     </span>
 
                     <h3>
-                        通信及光电子产品
+                        通信及光電子產品
                     </h3>
 
                     <p>
-                        面向通信设备及电子信息领域，
-                        提供相关产品供应服务。
+                        面向通信設備及電子資訊領域，
+                        提供相關產品供應服務。
                     </p>
 
                 </div>
@@ -780,12 +1040,12 @@
             </span>
 
             <h2>
-                供应与服务
+                供應與服務
             </h2>
 
             <p>
-                以产品供应与商务服务为核心，
-                为客户提供稳定的合作支持。
+                以產品供應與商務服務為核心，
+                為客戶提供穩定的合作支援。
             </p>
 
         </div>
@@ -800,7 +1060,7 @@
 
                     <img
                         src="images/machine.jpg"
-                        alt="电子产品相关设备"
+                        alt="電子產品相關設備"
                     >
 
                 </div>
@@ -813,13 +1073,13 @@
                     </span>
 
                     <h3>
-                        从产品了解到商务合作
+                        從產品瞭解到商務合作
                     </h3>
 
                     <p>
-                        根据客户实际需求，
-                        提供产品信息、规格支持、
-                        商务沟通及相关供应服务。
+                        根據客戶實際需求，
+                        提供產品資訊、規格支援、
+                        商務溝通及相關供應服務。
                     </p>
 
                 </div>
@@ -840,11 +1100,11 @@
                     <div>
 
                         <h3>
-                            产品供应
+                            產品供應
                         </h3>
 
                         <p>
-                            提供电子元器件及半导体相关产品支持。
+                            提供電子元器件及半導體相關產品支援。
                         </p>
 
                     </div>
@@ -862,11 +1122,11 @@
                     <div>
 
                         <h3>
-                            产品选型
+                            產品選型
                         </h3>
 
                         <p>
-                            根据客户应用方向协助进行产品沟通与选型。
+                            根據客戶應用方向協助進行產品溝通與選型。
                         </p>
 
                     </div>
@@ -884,11 +1144,11 @@
                     <div>
 
                         <h3>
-                            商务合作
+                            商務合作
                         </h3>
 
                         <p>
-                            面向企业客户开展产品及项目合作。
+                            面向企業客戶開展產品及專案合作。
                         </p>
 
                     </div>
@@ -906,11 +1166,11 @@
                     <div>
 
                         <h3>
-                            客户服务
+                            客戶服務
                         </h3>
 
                         <p>
-                            重视沟通效率与长期合作关系。
+                            重視溝通效率與長期合作關係。
                         </p>
 
                     </div>
@@ -947,7 +1207,7 @@
 
                 <img
                     src="images/applications.jpg"
-                    alt="电子产品应用场景"
+                    alt="電子產品應用場景"
                 >
 
             </div>
@@ -961,13 +1221,13 @@
                 </span>
 
                 <h2>
-                    服务电子信息产业
+                    服務電子資訊產業
                 </h2>
 
                 <p>
-                    电子半导体及相关产品可应用于
-                    通信设备、消费电子、智能终端、
-                    工业电子等不同领域。
+                    電子半導體及相關產品可應用於
+                    通信設備、消費電子、智慧終端、
+                    工業電子等不同領域。
                 </p>
 
 
@@ -981,7 +1241,7 @@
                         </span>
 
                         <strong>
-                            通信设备
+                            通信設備
                         </strong>
 
                     </div>
@@ -994,7 +1254,7 @@
                         </span>
 
                         <strong>
-                            消费电子
+                            消費電子
                         </strong>
 
                     </div>
@@ -1007,7 +1267,7 @@
                         </span>
 
                         <strong>
-                            智能终端
+                            智慧終端
                         </strong>
 
                     </div>
@@ -1020,7 +1280,7 @@
                         </span>
 
                         <strong>
-                            工业电子
+                            工業電子
                         </strong>
 
                     </div>
@@ -1054,7 +1314,7 @@
 
                 <img
                     src="images/automation.jpg"
-                    alt="自动化相关设备"
+                    alt="自動化相關設備"
                 >
 
                 <div class="scene-overlay">
@@ -1064,7 +1324,7 @@
                     </span>
 
                     <h3>
-                        自动化应用
+                        自動化應用
                     </h3>
 
                 </div>
@@ -1077,7 +1337,7 @@
 
                 <img
                     src="images/cleanroom.jpg"
-                    alt="洁净环境"
+                    alt="潔淨環境"
                 >
 
                 <div class="scene-overlay">
@@ -1087,7 +1347,7 @@
                     </span>
 
                     <h3>
-                        规范与品质
+                        規範與品質
                     </h3>
 
                 </div>
@@ -1122,11 +1382,11 @@
             </span>
 
             <h2>
-                联系我们
+                聯絡我們
             </h2>
 
             <p>
-                欢迎联系我们，了解产品信息与合作方式。
+                歡迎聯絡我們，瞭解產品資訊與合作方式。
             </p>
 
         </div>
@@ -1140,9 +1400,11 @@
             <div class="contact-card">
 
                 <div class="contact-icon">
+
                     <span>
                         📍
                     </span>
+
                 </div>
 
                 <div>
@@ -1152,7 +1414,7 @@
                     </span>
 
                     <h3>
-                        台湾新竹市東區科園里篤行一路1號
+                        台灣新竹市東區科園里篤行一路1號
                     </h3>
 
                 </div>
@@ -1166,15 +1428,17 @@
             <div class="contact-card">
 
                 <div class="contact-icon">
+
                     <span>
                         ☎
                     </span>
+
                 </div>
 
                 <div>
 
                     <span class="contact-label">
-                        联系电话
+                        聯絡電話
                     </span>
 
                     <h3>
@@ -1196,15 +1460,17 @@
             <div class="contact-card">
 
                 <div class="contact-icon">
+
                     <span>
                         ✉
                     </span>
+
                 </div>
 
                 <div>
 
                     <span class="contact-label">
-                        电子邮箱
+                        電子郵箱
                     </span>
 
                     <h3>
@@ -1226,15 +1492,17 @@
             <div class="contact-card">
 
                 <div class="contact-icon">
+
                     <span>
                         👤
                     </span>
+
                 </div>
 
                 <div>
 
                     <span class="contact-label">
-                        负责人
+                        負責人
                     </span>
 
                     <h3>
@@ -1257,7 +1525,7 @@
                 href="tel:+886933380939"
                 class="button button-primary"
             >
-                ☎ 立即联系
+                ☎ 立即聯絡
             </a>
 
 
@@ -1265,7 +1533,7 @@
                 href="mailto:lianyi6923@gmail.com"
                 class="button button-secondary"
             >
-                ✉ 发送邮件
+                ✉ 發送郵件
             </a>
 
 
@@ -1305,7 +1573,7 @@
                     </strong>
 
                     <small>
-                        电子半导体有限公司
+                        電子半導體有限公司
                     </small>
 
                 </div>
@@ -1314,8 +1582,8 @@
 
 
             <p>
-                专注电子半导体领域，
-                为客户提供专业、稳定的产品供应与商务服务。
+                專注電子半導體領域，
+                為客戶提供專業、穩定的產品供應與商務服務。
             </p>
 
         </div>
@@ -1325,27 +1593,27 @@
         <div class="footer-column">
 
             <h4>
-                快速导航
+                快速導航
             </h4>
 
             <a href="#home">
-                首页
+                首頁
             </a>
 
             <a href="#about">
-                关于我们
+                關於我們
             </a>
 
             <a href="#products">
-                产品中心
+                產品中心
             </a>
 
             <a href="#services">
-                供应与服务
+                供應與服務
             </a>
 
             <a href="#contact">
-                联系我们
+                聯絡我們
             </a>
 
         </div>
@@ -1355,7 +1623,7 @@
         <div class="footer-column">
 
             <h4>
-                联系方式
+                聯絡方式
             </h4>
 
             <a href="tel:+886933380939">
@@ -1367,7 +1635,7 @@
             </a>
 
             <span>
-                负责人：董志豪
+                負責人：董志豪
             </span>
 
         </div>
@@ -1381,7 +1649,7 @@
             </h4>
 
             <span>
-                台湾新竹市東區科園里篤行一路1號
+                台灣新竹市東區科園里篤行一路1號
             </span>
 
         </div>
@@ -1390,14 +1658,15 @@
     </div>
 
 
+
     <div class="container footer-bottom">
 
         <p>
-            © 2023 品行利航电子半导体有限公司
+            © 2026 品行利航電子半導體有限公司
         </p>
 
         <p>
-            保留所有权利
+            保留所有權利
         </p>
 
     </div>
@@ -1414,14 +1683,339 @@
     class="back-top"
     id="backTop"
     type="button"
-    aria-label="返回顶部"
+    aria-label="返回頂部"
 >
     ↑
 </button>
 
 
 
+<!-- ==================================================
+     EXISTING WEBSITE JS
+================================================== -->
+
 <script src="script.js"></script>
+
+
+
+<!-- ==================================================
+     GOOGLE TRANSLATE
+================================================== -->
+
+<script>
+    function googleTranslateElementInit() {
+
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: "zh-TW",
+
+                includedLanguages: "zh-CN,en",
+
+                autoDisplay: false
+            },
+
+            "google_translate_element"
+        );
+
+    }
+</script>
+
+
+<script
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+
+
+
+<!-- ==================================================
+     LANGUAGE SWITCHER SCRIPT
+================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const languageSwitcher =
+            document.getElementById(
+                "languageSwitcher"
+            );
+
+        const languageButton =
+            document.getElementById(
+                "languageButton"
+            );
+
+        const languageButtonText =
+            document.getElementById(
+                "languageButtonText"
+            );
+
+        const languageMenu =
+            document.getElementById(
+                "languageMenu"
+            );
+
+        const languageOptions =
+            languageMenu
+                ? languageMenu.querySelectorAll(
+                    "button[data-lang]"
+                )
+                : [];
+
+
+        if (
+            !languageSwitcher ||
+            !languageButton ||
+            !languageButtonText ||
+            !languageMenu
+        ) {
+            return;
+        }
+
+
+        /* ==================================================
+           OPEN / CLOSE
+        ================================================== */
+
+        languageButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                const active =
+                    languageSwitcher.classList.toggle(
+                        "active"
+                    );
+
+                languageButton.setAttribute(
+                    "aria-expanded",
+                    active ? "true" : "false"
+                );
+
+            }
+        );
+
+
+        /* ==================================================
+           LANGUAGE OPTIONS
+        ================================================== */
+
+        languageOptions.forEach(
+            function (option) {
+
+                option.addEventListener(
+                    "click",
+                    function (event) {
+
+                        event.stopPropagation();
+
+                        const lang =
+                            option.getAttribute(
+                                "data-lang"
+                            );
+
+                        setLanguage(lang);
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ==================================================
+           CLOSE WHEN CLICK OUTSIDE
+        ================================================== */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                languageSwitcher.classList.remove(
+                    "active"
+                );
+
+                languageButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+        );
+
+
+        /* ==================================================
+           SET LANGUAGE
+        ================================================== */
+
+        function setLanguage(lang) {
+
+            let label = "繁體中文";
+
+
+            if (lang === "zh-CN") {
+                label = "简体中文";
+            }
+
+
+            if (lang === "en") {
+                label = "English";
+            }
+
+
+            languageButtonText.textContent =
+                "🌐 " + label;
+
+
+            languageOptions.forEach(
+                function (option) {
+
+                    option.classList.toggle(
+                        "active",
+                        option.getAttribute(
+                            "data-lang"
+                        ) === lang
+                    );
+
+                }
+            );
+
+
+            languageSwitcher.classList.remove(
+                "active"
+            );
+
+            languageButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            localStorage.setItem(
+                "preferredLanguage",
+                lang
+            );
+
+
+            if (lang === "zh-TW") {
+
+                restoreOriginalLanguage();
+
+                return;
+
+            }
+
+
+            translateTo(lang);
+
+        }
+
+
+        /* ==================================================
+           TRANSLATE
+        ================================================== */
+
+        function translateTo(lang) {
+
+            const googleSelect =
+                document.querySelector(
+                    ".goog-te-combo"
+                );
+
+
+            if (!googleSelect) {
+
+                setTimeout(
+                    function () {
+
+                        translateTo(lang);
+
+                    },
+                    700
+                );
+
+                return;
+            }
+
+
+            googleSelect.value = lang;
+
+
+            googleSelect.dispatchEvent(
+                new Event("change")
+            );
+
+        }
+
+
+        /* ==================================================
+           RESTORE ORIGINAL TRADITIONAL CHINESE
+        ================================================== */
+
+        function restoreOriginalLanguage() {
+
+            const googleSelect =
+                document.querySelector(
+                    ".goog-te-combo"
+                );
+
+
+            if (googleSelect) {
+
+                googleSelect.value = "";
+
+                googleSelect.dispatchEvent(
+                    new Event("change")
+                );
+
+            }
+
+
+            document.documentElement
+                .setAttribute(
+                    "lang",
+                    "zh-TW"
+                );
+
+        }
+
+
+        /* ==================================================
+           RESTORE PREVIOUS LANGUAGE
+        ================================================== */
+
+        const savedLanguage =
+            localStorage.getItem(
+                "preferredLanguage"
+            );
+
+
+        if (
+            savedLanguage &&
+            savedLanguage !== "zh-TW"
+        ) {
+
+            setTimeout(
+                function () {
+
+                    setLanguage(
+                        savedLanguage
+                    );
+
+                },
+                1200
+            );
+
+        }
+
+    }
+);
+
+</script>
+
 
 </body>
 
